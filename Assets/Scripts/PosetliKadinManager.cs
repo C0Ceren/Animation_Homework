@@ -2,8 +2,8 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PosetliKadinManager : MonoBehaviour
-{
+public class PosetliKadinManager : MonoBehaviour //CHARACTER MANAGER && PLAYER MANAGER KODLARI BURAYA YAZILACAK
+{   
    public CharacterController _characterController;
    PosetliKadinLocomotion posetliKadinLocomotion;
   

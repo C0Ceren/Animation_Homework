@@ -681,7 +681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkingSpeed: 2
   runningSpeed: 5
-  rotationSpeed: 0.5
+  rotationSpeed: 1.5
   verticalMovement: 0
   horizontalMovement: 0
   moveAmount: 0
