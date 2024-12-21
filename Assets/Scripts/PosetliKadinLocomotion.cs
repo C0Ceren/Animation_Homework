@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-    public class PosetliKadinLocomotion : MonoBehaviour
+    public class PosetliKadinLocomotion : MonoBehaviour  //PLAYER LOCOMOTION MANAGER && CHARACTER LOCOMOTION MANAGER KODLARI BURAYA YAZILACAK
     {    
         [SerializeField] float walkingSpeed = 2.0f ;
         [SerializeField] float runningSpeed = 5.0f;
@@ -77,7 +77,7 @@ using UnityEngine.InputSystem;
                 targetRotationDirection = transform.forward;//Nesne mevcut baktığı yönü hedef olarak alır, bu sayede durur vaziyetteyken yön değiştirmez.
             }
 
-            Quaternion newRotation = Quaternion.LookRotation(targetRotationDirection); //Yeni yöne hesaplama
+            Quaternion newRotation = Quaternion.LookRotation(targetRotationDirection); //Yeni yönü hesaplama
             Quaternion targetRotation = Quaternion.Slerp(transform.rotation, newRotation, rotationSpeed * Time.deltaTime); //yumuşak geçiş
             transform.rotation = targetRotation; //hesaplanan dönüş mevcut dönüşe atanır.
 

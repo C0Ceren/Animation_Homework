@@ -141,11 +141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3973721326379063914, guid: e788f48bcd3b68a4da5aa8c36971a6e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6874835
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3973721326379063914, guid: e788f48bcd3b68a4da5aa8c36971a6e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12928009
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 3973721326379063914, guid: e788f48bcd3b68a4da5aa8c36971a6e5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Woman_with_cap
       objectReference: {fileID: 0}
+    - target: {fileID: 7045128084777467920, guid: e788f48bcd3b68a4da5aa8c36971a6e5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0149b070f66ff80448763dc2428e75e9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -196,6 +200,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4354610108920463568, guid: e788f48bcd3b68a4da5aa8c36971a6e5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1575678082}
+    - targetCorrespondingSourceObject: {fileID: 4354610108920463568, guid: e788f48bcd3b68a4da5aa8c36971a6e5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1575678088}
     - targetCorrespondingSourceObject: {fileID: 4354610108920463568, guid: e788f48bcd3b68a4da5aa8c36971a6e5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1575678084}
@@ -663,6 +670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a6ff1a2e93c8f458ad8b336f284dab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1575678083}
   movementInput: {x: 0, y: 0}
   horizontalInput: 0
   verticalInput: 0
@@ -697,7 +705,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa90bde80db62143aed82b9e9505438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterController: {fileID: 0}
+  _characterController: {fileID: 1575678084}
+  _animator: {fileID: 1575678089}
+  posetliKadinAnimatorManager: {fileID: 1575678088}
 --- !u!143 &1575678084
 CharacterController:
   m_ObjectHideFlags: 0
@@ -723,6 +733,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1575678088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575678078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03c43d3d0c96db34b893153113fde784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1575678089 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7045128084777467920, guid: e788f48bcd3b68a4da5aa8c36971a6e5, type: 3}
+  m_PrefabInstance: {fileID: 297517999}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -2,12 +2,14 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PosetliKadinMovement : MonoBehaviour
+public class PosetliKadinMovement : MonoBehaviour //PLAYER INPUT MANAGER KODLARI BURAYA YAZILACAK
 {
     private PlayerInput playerControls;
+    
+    public PosetliKadinManager player;
 
     [SerializeField] Vector2 movementInput;
-     public float horizontalInput;
+    public float horizontalInput;
     public float verticalInput;
     public float moveAmount;
 
@@ -37,6 +39,10 @@ public class PosetliKadinMovement : MonoBehaviour
         horizontalInput = movementInput.x;
         //Aşağıda moveAmount'u 0 ile 1 değeri arasında kısıtladık. yani vektörün x ve y değerlerinin mutlak değerinin toplamı 1 ila 0 arasında bir değer almak zorunda.
         moveAmount = Mathf.Clamp01(Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput));
+
+        if (player == null)
+            return;
         
+        player.posetliKadinAnimatorManager.UpdateAnimatorMovementParameters(0, moveAmount);
     }
 }
